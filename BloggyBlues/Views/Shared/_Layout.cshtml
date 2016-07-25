@@ -15,7 +15,18 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+ 
+    @Html.ActionLink("MVC Movie", "Index", "Movies", new { area = "" }, new { @class = "navbar-brand" })
+            
+
+    @Html.Partial("_LoginPartial")    
+      
+    
     @RenderBody()
+
+    <footer>
+        <p>Minch'n'Higgs Conglomerate - @DateTime.Now.Year</p>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/foundation")
