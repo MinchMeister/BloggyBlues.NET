@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggyBlues", "BloggyBlues\BloggyBlues.csproj", "{9437EECF-3F26-4D66-AB3F-99E72475F836}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggyBlues.Tests", "BloggyBlues.Tests\BloggyBlues.Tests.csproj", "{5DB1ECAC-EA27-498A-BF13-22058EFC2EE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9437EECF-3F26-4D66-AB3F-99E72475F836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9437EECF-3F26-4D66-AB3F-99E72475F836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9437EECF-3F26-4D66-AB3F-99E72475F836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9437EECF-3F26-4D66-AB3F-99E72475F836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB1ECAC-EA27-498A-BF13-22058EFC2EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB1ECAC-EA27-498A-BF13-22058EFC2EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB1ECAC-EA27-498A-BF13-22058EFC2EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB1ECAC-EA27-498A-BF13-22058EFC2EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
