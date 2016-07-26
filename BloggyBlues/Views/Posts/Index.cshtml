@@ -4,12 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
+<div class="text-center">
+    <h2>Index</h2>
     @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+    <br />
+    <br />
+</div>
+
+
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Title)
@@ -24,28 +27,26 @@
             @Html.DisplayNameFor(model => model.PublishedDate)
         </th>
         <th></th>
-    </tr>
+    </tr>*@
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
+@foreach (var item in Model)
+{
+    <div class="text-center" id="@(item.Title)-@(item.ID)">
+        <h3 id="Title-@(item.ID)">
             @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author)
-        </td>
-        <td>
+        </h3>
+        <p id="Author&Date-@(item.ID)">
+            By: @Html.DisplayFor(modelItem => item.Author) | Published : @Html.DisplayFor(modelItem => item.PublishedDate)
+        </p>
+        <p id="Content-@(item.ID)">
             @Html.DisplayFor(modelItem => item.Content)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PublishedDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
+        </p>
+
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </div>
+   <hr />
 }
 
-</table>
+
