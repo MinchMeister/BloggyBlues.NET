@@ -6,9 +6,29 @@
 
 <div class="text-center">
     <h2>Index</h2>
-    @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { id="createButton", @class="button tiny"})
+    @Html.ActionLink("Create New", "Create")
     <br />
     <br />
 </div>
 
-@Html.Partial("_PostPartial")
+@foreach (var item in Model)
+{
+    <div class="text-center" id="@(item.Title)-@(item.ID)">
+        <h3 id="Title-@(item.ID)">
+            @Html.DisplayFor(modelItem => item.Title)
+        </h3>
+        <p id="Author&Date-@(item.ID)">
+            By: @Html.DisplayFor(modelItem => item.Author) | Published : @Html.DisplayFor(modelItem => item.PublishedDate)
+        </p>
+        <p id="Content-@(item.ID)">
+            @Html.DisplayFor(modelItem => item.Content)
+        </p>
+
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </div>
+   <hr />
+}
+
+
