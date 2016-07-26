@@ -17,7 +17,7 @@ namespace BloggyBlues.Controllers
         // GET: Posts
         public ActionResult Index()
         {
-            return View(db.Posts.ToList());
+            return View(db.Posts.ToList().OrderByDescending(s => s.PublishedDate));
         }
 
         // GET: Posts/Details/5

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html class="no-js" lang="en">
+<html ng-app="BloggyBlues" ng-controller="blogHomeController" class="no-js" lang="en" >
 <head>
     <meta charset="utf-8" />
 
@@ -10,9 +10,10 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     @Styles.Render("~/Content/foundation/css")
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
     @RenderSection("head", required: false)
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/BloggyBlues")
 </head>
 <body>
     <nav class="top-bar" data-topbar role="navigation">
