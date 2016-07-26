@@ -4,47 +4,26 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Post</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Author)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Author)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PublishedDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PublishedDate)
-        </dd>
-
-    </dl>
+<div class="text-center">
+    <h2>Details</h2>
+    <br />
+    <br />
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+
+<div class="text-center" id="Title">
+    <h3 id="Title">
+        @Html.DisplayFor(model => model.Title)
+    </h3>
+    <p id="Author&Date">
+        By: @Html.DisplayFor(model => model.Author) | Published : @Html.DisplayFor(model => model.PublishedDate)
+    </p>
+    <p id="Content">
+        @Html.DisplayFor(model => model.Content)
+    </p>
+
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "button tiny" })
+    @Html.ActionLink("Details", "Details", new { id = Model.ID }, new { @class = "button tiny" })
+    @Html.ActionLink("Delete", "Delete", new { id = Model.ID }, new { @class = "button tiny" })
+</div>
+<hr />
